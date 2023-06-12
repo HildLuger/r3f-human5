@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 import './style.css';
 
 export default function Skull() {
-  const { scene } = useLoader(GLTFLoader, './src/skull2.gltf');
+  const { scene } = useLoader(GLTFLoader, './public/skull2.gltf');
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
   const [hover3, setHover3] = useState(false);
