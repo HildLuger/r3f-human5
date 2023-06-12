@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 import './style.css';
 
 export default function Skull() {
-  const { scene } = useLoader(GLTFLoader, './public/skull2.gltf');
+  const { scene } = useLoader(GLTFLoader, './skull2.gltf');
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
   const [hover3, setHover3] = useState(false);
@@ -42,7 +42,7 @@ export default function Skull() {
     if (hover1) {
       timer1 = setTimeout(() => setHover1(false), 5000);
       gsap.to(target, { duration: 2, x: 1.5, y: target1.y, z: target1.z, ease: "power4.out" });
-      gsap.to(camera.position, { duration: 2, x: cameraPosition1.x, y: cameraPosition1.y, z: cameraPosition1.z, ease: "power4.out" });
+      gsap.to(camera.position, { duration: 4, x: cameraPosition1.x, y: cameraPosition1.y, z: cameraPosition1.z, ease: "power4.out" });
       controlsRef.current.autoRotate = false;
       setHover2(false);
       setHover3(false);
@@ -57,7 +57,7 @@ export default function Skull() {
     if (hover2) {
       timer2 = setTimeout(() => setHover2(false), 5000);
       gsap.to(target, { duration: 2, x: -2, y: target2.y, z: target2.z, ease: "power4.out" });
-      gsap.to(camera.position, { duration: 2, x: cameraPosition2.x, y: cameraPosition2.y, z: cameraPosition2.z, ease: "power4.out" });
+      gsap.to(camera.position, { duration: 4, x: cameraPosition2.x, y: cameraPosition2.y, z: cameraPosition2.z, ease: "power4.out" });
       controlsRef.current.autoRotate = false;
       setHover1(false);
       setHover3(false);
@@ -72,7 +72,7 @@ export default function Skull() {
     if (hover3) {
       timer3 = setTimeout(() => setHover3(false), 5000);
       gsap.to(target, { duration: 2, x: 1.2, y: target3.y, z: target3.z, ease: "power4.out" });
-      gsap.to(camera.position, { duration: 2, x: cameraPosition3.x, y: cameraPosition3.y, z: cameraPosition3.z, ease: "power4.out" });
+      gsap.to(camera.position, { duration: 4, x: cameraPosition3.x, y: cameraPosition3.y, z: cameraPosition3.z, ease: "power4.out" });
       controlsRef.current.autoRotate = false;
       setHover1(false);
       setHover2(false);
