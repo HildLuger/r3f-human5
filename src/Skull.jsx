@@ -20,7 +20,7 @@ export default function Skull() {
   const target3 = new Vector3(0, -1, 1.8);
 
   const cameraPosition1 = new Vector3(-2, 1.2, 3.5);
-  const cameraPosition2 = new Vector3(0, 0.2, -4);
+  const cameraPosition2 = new Vector3(2, 0.2, -4);
   const cameraPosition3 = new Vector3(2, -1, 3.5);
 
   // Update the material to MeshPhysicalMaterial
@@ -56,7 +56,7 @@ export default function Skull() {
     let timer2;
     if (hover2) {
       timer2 = setTimeout(() => setHover2(false), 5000);
-      gsap.to(target, { duration: 2, x: -1, y: target2.y, z: target2.z, ease: "power4.out" });
+      gsap.to(target, { duration: 2, x: -2, y: target2.y, z: target2.z, ease: "power4.out" });
       gsap.to(camera.position, { duration: 2, x: cameraPosition2.x, y: cameraPosition2.y, z: cameraPosition2.z, ease: "power4.out" });
       controlsRef.current.autoRotate = false;
       setHover1(false);
